@@ -1,0 +1,189 @@
+
+{
+    "fsid": "foobar",
+    "health": {
+        "checks": {
+            "TOO_MANY_PGS": {
+                "severity": "HEALTH_WARN",
+                "summary": {
+                    "message": "too many PGs per OSD (216 > max 200)"
+                }
+            }
+        },
+        "status": "HEALTH_WARN",
+        "summary": [
+            {
+                "severity": "HEALTH_WARN",
+                "summary": "'ceph health' JSON format has changed in luminous. If you see this your monitoring system is scraping the wrong fields. Disable this with 'mon health preluminous compat warning = false'"
+            }
+        ],
+        "overall_status": "HEALTH_WARN"
+    },
+    "election_epoch": 31612,
+    "quorum": [
+        0,
+        1,
+        2
+    ],
+    "quorum_names": [
+        "0",
+        "2",
+        "1"
+    ],
+    "monmap": {
+        "epoch": 14,
+        "fsid": "foobar",
+        "modified": "2018-01-30 18:44:19.793680",
+        "created": "2016-06-19 10:55:12.324203",
+        "features": {
+            "persistent": [
+                "kraken",
+                "luminous"
+            ],
+            "optional": []
+        },
+        "mons": [
+            {
+                "rank": 0,
+                "name": "0",
+                "addr": "254.253.1.11:6789/0",
+                "public_addr": "254.253.1.11:6789/0"
+            },
+            {
+                "rank": 1,
+                "name": "2",
+                "addr": "254.253.1.12:6789/0",
+                "public_addr": "254.253.1.12:6789/0"
+            },
+            {
+                "rank": 2,
+                "name": "1",
+                "addr": "254.253.1.13:6789/0",
+                "public_addr": "254.253.1.13:6789/0"
+            }
+        ]
+    },
+    "osdmap": {
+        "osdmap": {
+            "epoch": 1276431,
+            "num_osds": 8,
+            "num_up_osds": 8,
+            "num_in_osds": 8,
+            "full": false,
+            "nearfull": false,
+            "num_remapped_pgs": 0
+        }
+    },
+    "pgmap": {
+        "pgs_by_state": [
+            {
+                "state_name": "active+clean",
+                "count": 576
+            }
+        ],
+        "num_pgs": 576,
+        "num_pools": 4,
+        "num_objects": 312791,
+        "data_bytes": 608723032500,
+        "bytes_used": 1823504519168,
+        "bytes_avail": 2175396294656,
+        "bytes_total": 3998900813824,
+        "read_bytes_sec": 170,
+        "write_bytes_sec": 716776,
+        "read_op_per_sec": 0,
+        "write_op_per_sec": 120
+    },
+    "fsmap": {
+        "epoch": 1257,
+        "id": 1,
+        "up": 1,
+        "in": 1,
+        "max": 1,
+        "by_rank": [
+            {
+                "filesystem_id": 1,
+                "rank": 0,
+                "name": "a",
+                "status": "up:active"
+            }
+        ],
+        "up:standby": 1
+    },
+    "mgrmap": {
+        "epoch": 39097,
+        "active_gid": 6079179,
+        "active_name": "1",
+        "active_addr": "254.253.1.11:6804/11969",
+        "available": true,
+        "standbys": [
+            {
+                "gid": 5562503,
+                "name": "0",
+                "available_modules": [
+                    "balancer",
+                    "dashboard",
+                    "influx",
+                    "localpool",
+                    "prometheus",
+                    "restful",
+                    "selftest",
+                    "status",
+                    "zabbix"
+                ]
+            },
+            {
+                "gid": 5562506,
+                "name": "3",
+                "available_modules": [
+                    "balancer",
+                    "dashboard",
+                    "influx",
+                    "localpool",
+                    "prometheus",
+                    "restful",
+                    "selftest",
+                    "status",
+                    "zabbix"
+                ]
+            },
+            {
+                "gid": 6079176,
+                "name": "2",
+                "available_modules": [
+                    "balancer",
+                    "dashboard",
+                    "influx",
+                    "localpool",
+                    "prometheus",
+                    "restful",
+                    "selftest",
+                    "status",
+                    "zabbix"
+                ]
+            }
+        ],
+        "modules": [
+            "dashboard",
+            "prometheus"
+        ],
+        "available_modules": [
+            "balancer",
+            "dashboard",
+            "influx",
+            "localpool",
+            "prometheus",
+            "restful",
+            "selftest",
+            "status",
+            "zabbix"
+        ],
+        "services": {
+            "dashboard": "http://example.com:7000/"
+        }
+    },
+    "servicemap": {
+        "epoch": 0,
+        "modified": "0.000000",
+        "services": {}
+    }
+}
