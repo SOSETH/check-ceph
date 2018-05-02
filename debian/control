@@ -1,0 +1,18 @@
+Source: check-ceph
+Section: devel
+Priority: extra
+Maintainer: Maximilian Falkenstein <mfalkenstein@sos.ethz.ch>
+Build-Depends: debhelper (>= 10),
+               dh-golang,
+               golang-any
+Standards-Version: 3.9.8
+Homepage: https://github.com/SOSETH/check-ceph
+Vcs-Browser: https://github.com/SOSETH/check-ceph
+Vcs-Git: https://github.com/SOSETH/check-ceph.git
+
+Package: check-ceph
+Architecture: any
+Built-Using: ${misc:Built-Using}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Check CEPH cluster health using CEPH's json status output
