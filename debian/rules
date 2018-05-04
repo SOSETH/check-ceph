@@ -6,3 +6,9 @@ export DH_GOPKG=github.com/SOSETH/check-ceph
 
 %:
 	dh $@ --buildsystem=golang --with=golang
+
+override_dh_auto_install:
+	dh_auto_install $@
+	mkdir -p debian/check-ceph/usr/lib/nagios/plugins
+	mv debian/check-ceph/usr/bin/check-ceph debian/check-ceph/usr/lib/nagios/plugins/check_ceph
+	rm -Rf debian/check-ceph/usr/bin
